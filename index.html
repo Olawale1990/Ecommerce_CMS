@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+
+<html>
+<!--<head><title> YinkaProfessor Web</title>
+<script> </script>-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title> YinkaProfessor Web</title>
+      
+         <style> 
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      
+    }
+    input[type=text], input[type=password] {
+      width:auto;
+      padding:12px , 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #04AA6D;
+      color:#fff;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 80%;
+    }
+    button:hover{
+      opacity:0.8;
+    }
+
+    .cancelbtn{
+     width: auto;
+     padding: 10px 18px;
+     background-color:#f44336;
+    }
+
+    .imgcontainer{
+      text-align: center;
+      margin:24px 0 12px 0;
+      position: relative;
+    }
+    img.avatar{
+      width:40%;
+      border-radius: 50%;
+    }
+
+    .container{
+      padding: 16px;
+    }
+    span.psw{
+      float: right;
+      padding-top: 16px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0,0, 0, 0.4);
+      padding-top: 60px;
+    }
+    .modal-content{
+      background-color: #fefefe;
+      margin: 5% auto 15% auto;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    .close{
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover, .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s;
+    }
+
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)}
+      to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes animatezoom {
+      from {transform: scale(0)}
+       to {transform: scale(1)}
+    }
+
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+
+      }
+
+      .cancelbtn{
+        width: 100%;
+      }
+    }
+    /*  
+.man{
+    float:right;
+    margin-left:30px;
+    border-radius:25px;
+}
+.nav navbar-nav{
+    background-color:blue;
+}
+    */
+</style>
+  
+    </head>
+    <div class="wrapper" style="width:100%; height:100%;">
+    <body>
+      
+  
+    <script>
+      var modal = document.getElementById('idol');
+      window.onclick = function(event) {
+        if(event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+  
+<script>
+     // onload=document.getElementById('Uname').innerHTML= document.write('<h3>'+'Welcome' + '  ' + User + '</h3>');
+      
+      onload('index2.html');
+      document.write('<h3>'+"Welcome" + '  ' + User + '</h3>');
+      
+      var User = document.getElementById("Uname").value;
+      var email = document.getElementById("email").value;
+      function show(){
+        
+      var User = document.getElementById("Uname").value;
+       //var good = prompt("Enter your name?");
+       alert("Welcome" + '  ' + User);
+       alert("you loggedIn")
+       window.location.href = "index2.html";
+      }
+       
+    </script>
+    <script>
+
+      document.getElementById('myform').addEventListener('submit', function(event){
+        event.preventDefault();
+
+        
+        const username = document.getElementById('Uname').value;
+        localStorage.setItem('loggedInUser', username);
+        window.location.href= 'index2.html';
+      });
+    </script>
+
+
+	<div class="fluid"> 
+<div class="container">
+  <img src="images/5.jpg" class="told" style="opacity:0.6;"/>
+  
+<!--<button type="button" class="btn" onclick="showWork()">click here To access the website by filling the form</a></button>-->
+   <center><h2>Click Login</h2></center>
+    <center><button type="button" onclick="document.getElementById('idol').style.display='block'" style="width:auto;" class="idol">Login</button>
+    </center>
+    <center>
+    <div id="idol" class="modal">
+      <form class="modal-content animate" action=" "  id = "myform">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('idol').style.display='none'" class="close" title="close Modal">&times;</span>
+          <img src="images/4.jpg"  alt= "avatar" class="avatar" style="width:30%; height:20%;">
+        </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+        
+          <input type="text" placeholder="Enter Username" name="uname" id = "Uname" required><br>
+          <label for="psw"><b>Password</b></label>
+           
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+
+            <button type="button" style="width:30%;" onclick="show()">Login</button><br>
+            <label style="float:right; margin-right: 20px; color:#f44336;">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            </div>
+            <div class="container" style="background-color: #f1f1f1; width:90%; margin-bottom:10px;">
+              <button type="button" onclick="document.getElementById('idol').style.display='none'" class="cancelbtn" >cancel</button>
+              <span class="psw">Forget &nbsp;<a href="#">password?</a></span>
+            
+        </div>
+      </form>
+    </div>
+</center>
+  
+</div>
+<style>
+
+.fluid{
+
+  height:100%;
+  width:100%;
+ 
+}
+.container{
+ height: 80%;
+  width:100%;
+  position:relative;
+}
+.container img{
+  width:100%;
+  height:auto;
+}
+.container .idol{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  background-color: #555;
+  color:#fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+  text-align: center;
+
+}
+h2{
+  position:absolute;
+  top:40%;
+  left:40%;
+  margin-bottom:10%;
+  background-color: #f03434;
+  color:#fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border:none;
+  border-radius:5px;
+  text-align: center;
+  
+
+}
+.container .idol:hover{
+  background-color: black;
+}
+.told{
+  width:100%;
+ background-position:50%;
+
+}
+
+</style>
+<script>
+  function showWork(){
+        
+      
+       window.location.href = "gallery.html";
+  }
+</script>
+<!--<img src="images/prof.jpg" alt="not available" height="40" width="30" class="man" />
+<a href="http://www.facebook.com/olayinkaolawale"><img src="images/facebook.jpg" width="20" height="10" style="margin-top: 20px; float:right; margin-right: 10px;"></a>
+<a href="http://www.twitter.com/olayinkaolawale"><img src="images/twitter.jpg" width="20" height="10" style="margin-top: 20px; float:right; margin-right: 10px;"></a>
+<p id="demo" style="color:#fff;"></p>
+-->
+<!--
+<script>
+ var name1 = prompt("enter your name?");
+ alert("Welcome"+ ' ' + name1);
+ document.getElementById('demo').innerHTML= Date();
+var name2 = prompt("How as your day been?");
+alert("it was"+'  '+ name2);
+var ans = prompt("are you sure u want to view the website?");
+if (ans) {
+  alert("you said" + '  ' + ans);
+}
+
+else{
+  alert("You refused to answer");
+}
+   
+</script>
+-->
+<!--<img src="newWeb/images/img1.jpg" alt="not available" height="500" width="100%" />
+<nav> 
+<ul>
+<li><a href="index.html"> Home </a> </li>
+<li><a href="aboutUs.html"> AboutUs </a> </li>
+<li><a href="contact.html"> ContactInfo </a> </li>
+<li><a href="product.html"> Product </a> </li>
+<li><a href="vision.html"> Vision </a> </li>
+
+</ul>
+
+ </nav>
+ -->
+
+
+    
+
+    
+</div>
+
+</div>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>my first dreamweaver website</title>
+<link href="stylesheets/corestylesheets.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+<div id="wrapper">
+
+<div  id="header">  header  </div>
+
+<div id="navigation"> NAVBAR  </div>
+
+<div id="content">
+
+<div id="column1"> <p>1. WHAT IS HEAVEN?  2. HOW BIG IS HEAVEN? 3. WHAT  IS HEAVEN LIKE?
+WHAT IS HEAVEN? Heaven is the home of the Lord God (Matthew 6:9). The Bible speaks of the three heavens(2 Corinthians 12:2). The first heaven is the area where birds fly. The second heaven is where the rockets go. The third heaven is the home or throne of the lord God. Heaven is a building of God and not man-made(2 Corinthians 5:1). It has been called the kingdom of God and of Christ (Ephesians 5:5). Surely, It is the Father's   House (John 14:2). It is a place of rest (Hebrews 4:9). </p>
+
+<p>HOW BIG IS HEAVEN? Heaven cannot be measured (Jeremiah 31:37). Some people have erroneously considered the New Jerusalem mentioned in this lesson's Bible passage as Heaven (Revelation 21:1). Nevertheless, the New Jerusalem is not Heaven. It is a part of heaven and not Heaven itself because the  New  Jerusalem comes out "from" Heaven (Revelation 21:2,10). Though Heaven is immeasurable, still it is for the limited few who are holy and pure and the mansions there, though many, are limited. That is why the Lord has to go to prepare a place for us. Therefore, it is a very wise thing to reserve your mansion today. This you can do by surrendering totally to the Lord.</p>
+
+</div>
+<div id="column2">  <p>1. WHAT IS HEAVEN?  2. HOW BIG IS HEAVEN? 3. WHAT  IS HEAVEN LIKE?
+WHAT IS HEAVEN? Heaven is the home of the Lord God (Matthew 6:9). The Bible speaks of the three heavens(2 Corinthians 12:2). The first heaven is the area where birds fly. The second heaven is where the rockets go. The third heaven is the home or throne of the lord God. Heaven is a building of God and not man-made(2 Corinthians 5:1). It has been called the kingdom of God and of Christ (Ephesians 5:5). Surely, It is the Father's   House (John 14:2). It is a place of rest (Hebrews 4:9). </p>
+
+<p>HOW BIG IS HEAVEN? Heaven cannot be measured (Jeremiah 31:37). Some people have erroneously considered the New Jerusalem mentioned in this lesson's Bible passage as Heaven (Revelation 21:1). Nevertheless, the New Jerusalem is not Heaven. It is a part of heaven and not Heaven itself because the  New  Jerusalem comes out "from" Heaven (Revelation 21:2,10). Though Heaven is immeasurable, still it is for the limited few who are holy and pure and the mansions there, though many, are limited. That is why the Lord has to go to prepare a place for us. Therefore, it is a very wise thing to reserve your mansion today. This you can do by surrendering totally to the Lord.</p>
+
+
+</div>
+
+<div id="column3">  <p>1. WHAT IS HEAVEN?  2. HOW BIG IS HEAVEN? 3. WHAT  IS HEAVEN LIKE?
+WHAT IS HEAVEN? Heaven is the home of the Lord God (Matthew 6:9). The Bible speaks of the three heavens(2 Corinthians 12:2). The first heaven is the area where birds fly. The second heaven is where the rockets go. The third heaven is the home or throne of the lord God. Heaven is a building of God and not man-made(2 Corinthians 5:1). <a href="#" title="click here">It has been called</a> the kingdom of God and of Christ (Ephesians 5:5). Surely, It is the Father's   House (John 14:2). It is a place of rest (Hebrews 4:9). </p>
+
+<p>HOW BIG IS HEAVEN? Heaven cannot be measured (Jeremiah 31:37). Some people have erroneously considered the New Jerusalem mentioned in this lesson's Bible passage as Heaven (Revelation 21:1). Nevertheless, the New Jerusalem is not Heaven. It is a part of heaven and not Heaven itself because the  New  Jerusalem comes out "from" Heaven (Revelation 21:2,10). Though Heaven is immeasurable, still it is for the limited few who are holy and pure and the mansions there, though many, are limited. That is why the Lord has to go to prepare a place for us. Therefore, it is a very wise thing to reserve your mansion today. This you can do by surrendering totally to the Lord.</p>
+
+</div>
+  
+  
+  <div style="clear:both;">&nbsp;</div>
+</div>
+
+
+<div id="footer"> footer </div>
+
+</div>
+
+
+</body>
+</html>
