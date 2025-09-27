@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width   , initial-scale=1.0"/>
+  <!--<meta name="color-scheme" content="dark"/>-->
+  <title>Ecommerce CMS</title>
+
+
+  <style>
+    body{
+      font-family: "Lato", sans-serif;
+    }
+    .sidenav {
+
+      height: 100%;
+      width:160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x:scroll;
+      padding-top: 20px;
+    }
+    .sidenav a{
+     padding: 6px 8px 6px 16px;
+     text-decoration: none;
+     font-size: 15px;
+     color:#818181;
+     display: block;
+    }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    .main {
+      margin-left: 160px;
+      font-size: 28px;
+      padding: 0px 10px;
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    .header{
+      width:100%;
+      background-color:rgb(253, 61, 2);
+      height:50px;
+
+/* for fixed navbar*/
+    
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+    
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper" style="width:100%;">
+<div class="sidenav" style="padding-top:70px; float:left; margin-bottom: 30px; ">
+    <a href="index2.html" style="padding-left:-20px;"><img src="images/fav7.png" class="ola"/>Dashboard</a>
+  <a href="aboutUs.html"><img src="images/fav2.png" class="ola"/>About</a>
+  <a href="services.html"><img src="images/fav7.png" class="ola"/>Services</a>
+  <a href="client.html"><img src="images/fav4.png" class="ola"/>Feedback</a>
+  <a href="register.html"><img src="images/fav2.png" class="ola"/>Register</a>
+  <a href="cont.html"><img src="images/fav5.png" class="ola"/>Contact</a>
+  <a href="vision.html"><img src="images/fav6.png" class="ola"/>Order/add to cart</a>
+  <a href="gallery.html"><img src="images/fav8.png" class="ola"/>Gallery</a>
+  
+  
+  <a href="settings.html"><img src="images/fave2.png" class="ola"/>Settings</a>
+  
+  <a href="terms.html"><img src="images/fav1.png" class="ola" style="background-color: #d88989;"/>Terms and Condition</a>
+  <style>
+    .ola{width:30px;
+    height:30px;}
+  </style>
+
+</script>
+  <script>
+      
+      var User = document.getElementById("Uname").value;
+      var email = document.getElementById("email").value;
+      function show(){
+        
+      var User = document.getElementById("Uname").value;
+      
+       alert("You have LoggedIn successfully");
+        alert("Welcome" + '  ' + User);
+       window.location.href = "cont.html";
+      }
+
+      
+</script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function(){
+               const username = localStorage.getItem('loggedInUser');
+
+               if(username) {
+                document.getElementById('displayUsername').textContent = username;
+
+               }
+               else{
+                window.location.href = 'cont.html';
+               }
+              });
+            </script>
+
+
+  <p>  <a href="#">Version 1.0</a></p>
+</div>
+<div class="main">
+  <div class="header">
+    <img src="images/yinks.jpg" style="width:50px; height:50px;"/>
+    <a href="https://www.facebook.com/olayinkaolawale"><img src="images/facebook.jpg" style="width:20px; height:20px; float:right;"/></a>
+    <a href="https://www.xtwitter.com/olawaleola234"><img src="images/twitter.jpg" style="width:20px; height:20px; float:right;"/></a>
+  
+  </div>
+    
+  <div class="container-fluid" style="width: 100%; height:100%;">
+   
+  <h2 style="color:rgb(253, 61, 2); text-align: center; padding-top:70px;">LOGIN</h2>
+
+     <div class="col-md-4" style="width:100%; height:100%; float:left; padding-left:25px;margin-top:30px; background-color: #fff;">
+    <div style="width:100%; height:100%; float:center; padding-left:25px;margin-top:30px; background-color: rgb(253, 61, 2);">
+    
+    <form style="background-color: #fff; color:rgb(253, 61, 2); padding-left: 20px; width: 100%;">
+
+    <fieldset>
+        <legend> Login Details:</legend>
+        <label>Username:</label><input type="text" name="Uname" id="Uname" placeholder="firstname" required="required"/><span style="color:red;">*</span><br/><br/>
+        
+        <label>Email:</label><input type="text" name="email" id="email" placeholder="email"  required="required"/><span style="color:red;">*</span><br/><br/>
+       <center> <a href="https://wa.me/08165557636"><input type="button"   style="background-color:rgb(253, 61, 2); color:#fff;"  name="sub" id="sub"  value="login" style="margin-left:100px;" onclick="show()"/></a></center>
+
+      
+    </fieldset>
+</form>
+    </div>
+      <div class="col-md-4" style="width:100%;">
+      
+       <div class="thumbnail" style="width:100%; overflow-x:auto; ">
+      <table border="1">
+        <thead>
+          <tr>
+          <th>Names of Items</th>
+           <th>Category by sizes</th>
+            <th>Old Price</th>
+             <th> New Price</th>
+
+        </tr>
+        </thead>
+        <tbody>
+           <tr>
+          <td data-label="Names of Items">Television</td>
+           <td data-label="Category">40/80 inches </td> 
+            <td data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N150,000/N300,000</td>
+             <td data-label="New Price">N80000/N150,000</td>
+
+        </tr>
+        
+        
+           <tr>
+          <td data-label="Names of items">wristwatches</td>
+           <td data-label="Category by sizes">Varieties</td> 
+            <td  data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N15,000</td>
+             <td data-label="New Price"> N5,000</td>
+
+        </tr>
+         <tr>
+          <td data-label="Names of items">shoes</td>
+           <td data-label="Category by sizes">Varieties</td> 
+            <td  data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N40,000</td>
+             <td data-label="New Price"> N30,000</td>
+
+        </tr>
+         <tr>
+          <td data-label="Names of items">Agro product</td>
+           <td data-label="Category by sizes">Varieties</td> 
+            <td  data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N10,000</td>
+             <td data-label="New Price"> N5,000</td>
+
+        </tr>
+         <tr>
+          <td data-label="Names of items">Tourist Attreaction</td>
+           <td data-label="Category by sizes">Varieties</td> 
+            <td  data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N3,000,000</td>
+             <td data-label="New Price"> N1,500,000</td>
+
+        </tr>
+         <tr>
+          <td data-label="Names of items">Bags/Books</td>
+           <td data-label="Category by sizes">Varieties</td> 
+            <td  data-label="Old Price" style="text-decoration: line-through; text-decoration-color: #fff;">N15,000</td>
+             <td data-label="New Price"> N10,000</td>
+
+        </tr>
+        </tbody>
+        
+      </table>
+</div>
+     </div>
+     <style>
+      @media screen and (max-width:600px) {
+        table, thead ,tbody , th , td , tr {
+          display: block;
+        }
+        thead tr{
+          position : absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+        tr {
+          border: 1px solid #ccc;
+          margin-bottom: 5px;
+        }
+        td {
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+        }
+
+        td:before {
+          position: absolute;
+          left: 6px;
+          content: attr(data-label);
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+     </style>
+     <style>
+      .good{
+        width: 800px;
+        height:400px;
+     max-width: 1000px;
+      position: fixed;
+      margin: 3px solid #3e8;
+      vertical-align: middle;
+      }
+      table{
+     color:#fff;
+     background-color: rgb(253, 61, 2);
+     width:98%;
+     margin-top:40px;
+      font-size: medium;
+      text-align: center;
+      margin-left:20px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .love{
+        display: none;
+      }
+     </style>
+     <!---
+     <div class="col-md-4" style="width:250px; height:220px; float:left; padding-left:25px;margin-top:30px;">
+      <div class="thumbnail" style="width:250px; height:220px; float:left;">
+        <a href="images/4.jpg" target ="_blank" >
+        <img src="images/4.jpg" style="width:250px; height:220px; float:left; padding-left:25px;"/>
+        
+        <caption></caption>
+       
+      </div>
+       </a>
+    </div>
+     <div class="col-md-4" style="width:250px; height:220px; float:left; padding-left:25px;margin-top:30px;">
+      <div class="thumbnail" style="width:250px; height:220px; float:left;">
+        <a href="images/5.jpg" target ="_blank" >
+        <img src="images/5.jpg" style="width:250px; height:220px; float:left; padding-left:25px;"/>
+        
+        <caption></caption>
+       
+      </div>
+       </a>
+    </div>
+     <div class="col-md-4" style="width:250px; height:220px; float:left; padding-left:25px;margin-top:30px;">
+      <div class="thumbnail" style="width:250px; height:220px; float:left;">
+        <a href="images/yinks.jpg" target ="_blank" >
+        <img src="images/yinks.jpg" style="width:250px; height:220px; float:left; padding-left:25px;"/>
+        
+        <caption></caption>
+       
+      </div>
+       </a>
+    </div>
+     <div class="col-md-4" style="width:250px; height:220px; float:left; padding-left:25px;margin-top:30px;">
+      <div class="thumbnail" style="width:250px; height:220px; float:left;">
+        <a href="images/2.jpg" target ="_blank" >
+        <img src="images/2.jpg" style="width:250px; height:220px; float:left; padding-left:25px;"/>
+        
+        <caption></caption>
+       
+      </div>
+       </a>
+    </div>
+  -->
+  </div>
+
+   <div class="footer" style="width:100%; margin-top:200px; float:left; margin-bottom: 60px;">
+     <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/img7.jpg" style="width:100%">
+      <div class="text"> Caption Text</div>
+      
+    </div>
+    <div class="mySlides fade">
+     <div class="numbertext">2 / 3</div>
+      <img src="images/img2.jpg" style="width:100%">
+      <div class="text"> Caption Two</div>
+      
+    </div>
+    <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+      <img src="images/img3.jpg" style="width:100%">
+      <div class="text"> Caption Three</div>
+      
+    </div>
+   <!--- <a class="prev" onclick = "plusSlides(-1)"> < </a>
+    <a class="next" onclick = "plusSlides(1)"> > </a>
+  -->
+  </div>
+  <br>
+  
+
+  <div style="text-align:center">
+    <!--
+    <span class="dot" onclick = "currentSlide(1)"></span>
+    <span class="dot" onclick = "currentSlide(2)"></span>
+    <span class="dot" onclick = "currentSlide(3)"></span>
+  -->
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  
+  
+
+  <style>
+    * {
+      box-sizing:border-box
+    }
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0
+    }
+    .mySlides {
+   display: none;
+  }
+  img {
+    vertical-align: middle;
+  }
+    /*slideshow container*/
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+  }
+  /*
+  .prev , .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold ;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+    */
+   
+  /*position the "next button" to the right */
+  /*
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+    */
+  .text {
+    color:#f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  /*
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+  }
+    */
+    .dot {
+  
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+    /*
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+    */
+    .active {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+
+  }
+  @media only screen and (max-width:300px) {
+    /*.prev, .next, .text {
+      font-size: 11px
+    }
+      */
+      .text {
+      font-size: 11px
+    }
+  }
+  </style>
+  <script>
+
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+       let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots =  document.getElementsByClassName("dot");
+      /*
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+        */
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active","");
+
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+    
+    /*
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots =  document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active","");
+
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      
+    }
+      */
+  </script>
+    <!---
+     <style>
+
+        #slider{
+          overflow: hidden;
+        }
+      
+      #slider figure {
+      
+          position: relative;
+          width: 800%;
+          margin: 0;
+          left: 0;
+          animation: 60s slider infinite;
+      }
+      #slider figure img {
+        width:25%;
+        float:left;
+      }
+      @keyframes slider {
+        0% {
+            left: 0;
+        }
+        20%{
+            left: 0;
+        }
+        25%{
+            left: -100%;
+        }
+        45%{
+            left: -100%;
+        }
+        50%{
+
+            left: -200%;
+        }
+        70%{
+            left: -200%;
+        }
+
+        75%{
+            left: -300%;
+        }
+
+        95%{
+            left: -300%;
+        }
+        100%{
+            left: -400%;
+        }
+      }
+          </style>
+      
+  <div id="slider">
+    <figure>
+ <img src="images/img1.jpg" width="50%" height="400">
+ <img src="images/img2.jpg" width="50%" height="400">
+ <img src="images/img4.jpg" width="50%" height="400">
+ 
+    </figure>
+    </div>
+  -->
+   
+    
+        
+
+    
+
+</div>
+</div>
+</div>
+</body>
+</html>
